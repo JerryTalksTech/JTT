@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JerryTalksTech — Tech Reviews & Tutorials</title>
+  <meta name="description" content="JerryTalksTech: straight-talk tech reviews, PC hardware insights, and how‑to guides across YouTube, Facebook, and Twitch." />
+  <style>
+    :root{
+      --brand:#1fb6ff;
+      --ink:#d6f1ff;
+      --bg:#0a0f1a;
+      --card:#0e1422;
+      --accent:#65d1ff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol';
+      color:var(--ink);
+      background: var(--bg) url('header.png') center / cover fixed no-repeat;
+      line-height:1.6;
+      backdrop-filter: saturate(120%);
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:auto;padding:0 16px}
+    header.site-header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(8,12,24,.75);
+      border-bottom:1px solid rgba(101,209,255,.18);
+      backdrop-filter: blur(10px);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.5px}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);box-shadow:0 0 12px var(--brand)}
+    .nav a{margin-left:16px; font-weight:600}
+    .hero{
+      min-height:60vh;
+      display:grid; place-items:center;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid rgba(101,209,255,.2);
+      background: radial-gradient(80% 80% at 50% 20%, rgba(31,182,255,.18), rgba(10,15,26,0)) no-repeat;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background: url('background.png') center / contain no-repeat;
+      opacity:.25;
+      filter: drop-shadow(0 10px 40px rgba(31,182,255,.35));
+      pointer-events:none;
+    }
+    .hero-inner{
+      position:relative; z-index:2; text-align:center; padding:48px 0;
+    }
+    .hero h1{
+      margin:0 0 12px;
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      line-height:1.1;
+      letter-spacing:.5px;
+      text-shadow: 0 0 8px rgba(31,182,255,.5), 0 0 24px rgba(31,182,255,.35);
+    }
+    .tagline{opacity:.9; font-size: clamp(1rem, 2.4vw, 1.25rem)}
+    .cta{
+      margin-top:24px; display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center;
+    }
+    .btn{
+      border:1px solid rgba(101,209,255,.5);
+      padding:12px 16px; border-radius:999px; font-weight:700;
+      background: linear-gradient(180deg, rgba(21,34,56,.8), rgba(9,16,32,.7));
+      box-shadow: inset 0 0 12px rgba(31,182,255,.15), 0 8px 24px rgba(0,0,0,.35);
+      cursor:pointer; color:var(--ink);
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow: inset 0 0 14px rgba(31,182,255,.22), 0 10px 28px rgba(0,0,0,.45)}
+    section{padding:56px 0}
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      grid-column: span 12;
+      padding:20px;
+      border:1px solid rgba(101,209,255,.18);
+      border-radius:16px;
+      background: linear-gradient(180deg, rgba(16,24,40,.85), rgba(11,18,30,.8));
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    @media (min-width: 760px){
+      .card.third{grid-column: span 4}
+      .card.half{grid-column: span 6}
+    }
+    h2{margin:0 0 12px; font-size: clamp(1.4rem, 3vw, 2rem)}
+    .list{margin:0; padding-left:18px}
+    footer{
+      border-top:1px solid rgba(101,209,255,.18);
+      background: rgba(8,12,24,.75);
+      padding:28px 0; text-align:center;
+    }
+    .contact-box{
+      display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+      justify-content:center; margin-top:12px
+    }
+    .chip{
+      border:1px solid rgba(101,209,255,.35);
+      padding:8px 12px; border-radius:999px; background:rgba(14,22,36,.6)
+    }
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <div class="brand"><span class="dot" aria-hidden="true"></span><span>JerryTalksTech</span></div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#guides">Guides</a>
+        <a href="#ai">AI</a>
+        <a href="#os">OS</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner wrap">
+        <h1>JerryTalksTech</h1>
+        <p class="tagline">No fluff. Old‑school integrity. Hands‑on reviews & how‑to tutorials for real builders.</p>
+        <div class="cta">
+          <a class="btn" href="#reviews">Latest Reviews</a>
+          <a class="btn" href="#contact">Work With Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap grid">
+        <article class="card half">
+          <h2>About</h2>
+          <p>JerryTalksTech is where decades of PC hardware and software know‑how meet straight talk. Expect practical benchmarks, honest opinions, and clear setup guides you can actually follow.</p>
+          <ul class="list">
+            <li>PC parts deep dives (CPU, GPU, RAM, storage, PSUs)</li>
+            <li>Build guides: budget to high‑end</li>
+            <li>Creator & gamer workflows that hold up in the real world</li>
+          </ul>
+        </article>
+        <aside class="card half">
+          <h2>Platform Links</h2>
+          <p>Catch content across the usual suspects. Same message everywhere: get it done right.</p>
+          <div class="contact-box">
+            <span class="chip">YouTube</span>
+            <span class="chip">Facebook</span>
+            <span class="chip">Twitch</span>
+            <span class="chip">X</span>
+            <span class="chip">Instagram</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="wrap grid">
+        <div class="card third">
+          <h2>Power Supplies</h2>
+          <p>We stress test efficiency, ripple, thermals, and real‑case cabling—no cherry‑picked charts.</p>
+        </div>
+        <div class="card third">
+          <h2>GPUs & CPUs</h2>
+          <p>Frame‑time focused testing and heat/noise trade‑offs you can live with.</p>
+        </div>
+        <div class="card third">
+          <h2>Storage & RAM</h2>
+          <p>Latency, endurance, and value. The boring details that actually matter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides">
+      <div class="wrap grid">
+        <article class="card">
+          <h2>Guides & How‑Tos</h2>
+          <p>From first boot to BIOS tuning, we spell out the steps—no gatekeeping.</p>
+          <ul class="list">
+            <li>Clean Windows/Linux install checklists</li>
+            <li>Thermal paste & cooler mounting done right</li>
+            <li>PSU sizing the grown‑up way (math, not vibes)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap grid">
+        <article class="card">
+          <h2>Contact</h2>
+          <p>If you want a no‑nonsense review or a sponsored deep dive that won’t insult your audience, reach out. I answer every serious inquiry.</p>
+          <p><strong>Email:</strong> <a href="mailto:JerryTalksTech@outlook.com">JerryTalksTech@outlook.com</a></p>
+          <p class="sr-only">Alternative text: Contact email for JerryTalksTech.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ai">
+      <div class="wrap grid">
+        <article class="card half">
+          <h2>AI</h2>
+          <p>Real-world tests of AI tools and workflows—no hype. I cover what speeds you up, what breaks, and what’s worth your money.</p>
+          <ul class="list">
+            <li>Local vs. cloud models: speed, privacy, and cost</li>
+            <li>Creator workflows: thumbnails, transcripts, captions, B‑roll</li>
+            <li>Benchmarking prompts vs. fine‑tuning vs. tools</li>
+          </ul>
+        </article>
+        <aside class="card half">
+          <h2>Recommended Setups</h2>
+          <p>Starter, prosumer, and power‑user stacks with clear trade‑offs.</p>
+          <ul class="list">
+            <li>Local inference builds (AMD/NVIDIA)</li>
+            <li>Hybrid pipelines for teams</li>
+            <li>Backup/archival & data hygiene</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+
+    <section id="os">
+      <div class="wrap grid">
+        <article class="card third">
+          <h2>Windows</h2>
+          <p>Clean installs, driver sanity, debloat that actually helps, and gaming/creator tweaks that don’t wreck stability.</p>
+        </article>
+        <article class="card third">
+          <h2>Linux</h2>
+          <p>Distro picks by use case, GPU drivers the right way, Proton/Wine game fixes, and creator toolchains.</p>
+        </article>
+        <article class="card third">
+          <h2>Dual‑Boot & Migration</h2>
+          <p>Partitioning, bootloaders, file system choices, and bulletproof backup plans—because mistakes happen.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>&copy; <span id="y"></span> JerryTalksTech. Built the traditional way—HTML/CSS, tuned by hand.</small>
+    </div>
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
